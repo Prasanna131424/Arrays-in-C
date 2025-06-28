@@ -1,0 +1,28 @@
+/*write a code for reversing an array of integer elements
+to slove these program
+printing in reverse order
+storing in new array in reverse order
+reversing in place*/
+//printing in reverse order
+#include<stdio.h>
+void main()
+{
+    int size,safe;
+    scanf("%d",&size);
+    if(size<=0) return;
+    int arr[size];
+    for(int ind=0;ind<size;scanf("%d",&arr[ind++]));
+    int ind1,ind2;
+    int reverse[size];
+    for( ind1=0,ind2=size-1;ind1<ind2;ind1++,ind2--)
+    {
+    safe=arr[ind1];
+    arr[ind1]=arr[ind2];
+    arr[ind2]=safe;
+    }
+    for(int ind=0;ind<size;ind++){
+    printf("%d",arr[ind]);
+}
+    
+    
+}
